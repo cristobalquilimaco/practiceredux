@@ -9,6 +9,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .img_movie{
