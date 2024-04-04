@@ -1,0 +1,17 @@
+.card__movies{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ssss{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.img_movie{
+    width: 500px;
+}
+
