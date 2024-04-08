@@ -4,8 +4,6 @@ import "./styles/movieCard.css";
 const MovieCard = () => {
   const moviesData = useSelector(state => state.moviesGlobal);
 
-  console.log(moviesData);
-
   return (
     <div className="card__movies">
       <section className="ssss">

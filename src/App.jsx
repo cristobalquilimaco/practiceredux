@@ -1,9 +1,9 @@
 
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-
 import { getMoviesThunks } from "./store/slices/movies.slices";
-import MovieCard from "./components/movieCard";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 
 
 
@@ -17,8 +17,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Lista de Películas</h1>
-      <MovieCard /> {/* Renderiza el componente CocktailsCard aquí */}
+      <Routes>
+      <Route path='/' element={<Home />} />
+      </Routes>
+      
     </div>
   );
 };
