@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getMoviesThunks } from "./store/slices/movies.slices";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
+import Navbar from "./shared/Navbar";
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Navbar/>
       <Routes>
       <Route path='/' element={<Home />} />
       </Routes>
