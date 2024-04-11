@@ -67,6 +67,7 @@
     position: relative;
     bottom: 120px;
     left: 10px;
+    font-weight: bold;
   }
   
   .yellow {
@@ -75,6 +76,7 @@
     position: relative;
     bottom: 120px;
     left: 10px;
+    font-weight: bold;
   }
   
   .green {
@@ -84,4 +86,5 @@
     position: relative;
     bottom: 120px;
     left: 10px;
+    font-weight: bold;
   }
