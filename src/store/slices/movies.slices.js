@@ -30,7 +30,7 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
       url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKeyMovie}`;
       break;
     default:
-      url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKeyMovie}`;
+      url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKeyMovie}`;
       break;
   }
   try {

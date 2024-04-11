@@ -35,6 +35,7 @@ const MovieCard = () => {
         <button className="button__filter" onClick={() => handleFilterChange("popular")}>Populares</button>
         <button className="button__filter" onClick={() => handleFilterChange("upcoming")}>Próximos Estrenos</button>
         <button className="button__filter" onClick={() => handleFilterChange("now_playing")}>En Cartelera</button>
+        <button className="button__filter" onClick={() => handleFilterChange("movie")}>Top rated</button>
       </div>
       <section className="ssss">
         {moviesData && moviesData.length > 0 ? (

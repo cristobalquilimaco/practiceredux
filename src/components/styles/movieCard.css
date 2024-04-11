@@ -42,6 +42,19 @@
     height: 650px;
 }
 
+.movie__card:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+    
+}
+
+.movie__card{
+    color: white;
+    width: 400px;
+    object-fit: cover;
+    height: 650px;
+}
+
 
 .img_movie{
     width: 400px;
