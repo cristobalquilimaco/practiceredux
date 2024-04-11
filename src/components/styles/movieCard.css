@@ -3,16 +3,28 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .filter-buttons{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-evenly;   
     margin-bottom: 2rem;
+}
+
+.button__filter{
+    padding: 0.8em;
+    border-radius: 10px;
+    background-color: rgb(33, 33, 109);
+    color: white;
+    font-size: 18px;
+}
+
+.button__filter:hover{
+    cursor: pointer;
+    filter: brightness(1.5);
 }
 
 .ssss{
@@ -23,7 +35,53 @@
     justify-content: center;
 }
 
-.img_movie{
-    width: 500px;
+.movie__card{
+    color: white;
+
 }
 
+
+.img_movie{
+    width: 500px;
+    border-radius: 10px;
+}
+
+/*** CIRCLE COLOR WHITE  ***/
+
+.circle_number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+
+  }
+  
+  .red {
+    border: 3px solid red;
+    color: white;
+    position: relative;
+    bottom: 120px;
+    left: 10px;
+  }
+  
+  .yellow {
+    border: 3px solid yellow;
+    color: white;
+    position: relative;
+    bottom: 120px;
+    left: 10px;
+  }
+  
+  .green {
+    border: 3px solid green;
+    color: white;
+    color: white;
+    position: relative;
+    bottom: 120px;
+    left: 10px;
+  }

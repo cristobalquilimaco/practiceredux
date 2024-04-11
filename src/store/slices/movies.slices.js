@@ -29,7 +29,6 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
     case "now_playing":
       url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKeyMovie}`;
       break;
-    // Agrega más casos según sea necesario para otros tipos de filtro
     default:
       url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKeyMovie}`;
       break;
@@ -40,6 +39,8 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
       id: movie.id,
       title: movie.title,
       overview: movie.overview,
+      release_date: movie.release_date,
+      vote_average: formatVoteAverage(movie.vote_average),
       poster_path: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
       backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
     }));
@@ -50,3 +51,12 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
     throw error;
   }
 };
+
+
+const formatVoteAverage = (voteAverage) => {
+  if(!isNaN(voteAverage)) {
+    return parseFloat(voteAverage).toFixed(1);
+  }
+  return voteAverage;
+}
+

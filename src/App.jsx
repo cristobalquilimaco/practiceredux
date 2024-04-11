@@ -5,6 +5,7 @@ import {  getMoviesThunks,} from "./store/slices/movies.slices";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Navbar from "./shared/Navbar";
+import "./app.css"
 
 
 
