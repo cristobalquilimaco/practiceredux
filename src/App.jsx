@@ -1,7 +1,7 @@
 
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getMoviesThunks } from "./store/slices/movies.slices";
+import {  getMoviesThunks,} from "./store/slices/movies.slices";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Navbar from "./shared/Navbar";

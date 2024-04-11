@@ -3,7 +3,7 @@ import "./styles/poster.css";
 
 const Poster = () => {
     const posterMovies = useSelector(state => state.moviesGlobal);
-  
+
     return (
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">
@@ -12,11 +12,19 @@ const Poster = () => {
                 ))}
             </div>
             <div className="carousel-inner">
-                {posterMovies.map((poster, index) => (
-                    <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                        <img src={poster.backdrop_path} className="img__poster d-block w-100" alt="" />
-                    </div>
-                ))}
+                {posterMovies.map((poster, index) => {
+                    const firstDotIndex = poster.overview.indexOf('.');
+                    const trimmedOverview = poster.overview.substring(0, firstDotIndex + 1);
+                    return (
+                        <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                            <img src={poster.backdrop_path} className="img__poster d-block w-100" alt="" />
+                            <div className="poster_title">
+                                <h1>{poster.title}</h1>
+                                <p>{trimmedOverview}</p>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

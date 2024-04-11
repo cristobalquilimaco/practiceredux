@@ -1,7 +1,7 @@
 .carousel-item {
     position: relative;
     width: 100%; 
-    height: 800px; 
+    height: 800px;
     overflow: hidden; 
 }
 
@@ -31,4 +31,11 @@
 .carousel-item::after {
     right: 0; 
     background: linear-gradient(to left, rgba(0,0,0,5.9), transparent); 
+}
+
+.poster_title{
+    color: white;
+    position: relative;
+    z-index: 999;
+    bottom: 300px;
 }
