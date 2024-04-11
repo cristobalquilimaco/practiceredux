@@ -37,3 +37,18 @@
     text-decoration: none;
     color: inherit;
   }
+
+
+  body::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(21, 15, 105);        
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(44, 44, 150);    
+    border-radius: 20px;       
+ 
+  }
