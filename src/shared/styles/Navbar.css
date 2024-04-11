@@ -12,12 +12,49 @@
     color: white !important;
 }
 
-#navbarScroll{
-
-}
+.navbar-nav-scroll {
+    overflow-y: auto !important; 
+    max-height: 100px !important; 
+    background-color: black !important;
+  }
 .collapse{
     
 }
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 0.5rem;
+    font-size: 19px;
+}
+
+.search_list{
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar-nav-scroll::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+  .navbar-nav-scroll::-webkit-scrollbar-track {
+    background: rgb(21, 15, 105);        
+  }
+  
+  .navbar-nav-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(44, 44, 150);    
+    border-radius: 20px;       
+ 
+  }
 
 @media screen {
     

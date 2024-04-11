@@ -19,7 +19,7 @@ const Poster = () => {
                         <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                             <img src={poster.backdrop_path} className="img__poster d-block w-100" alt="" />
                             <div className="poster_title">
-                                <h1>{poster.title}</h1>
+                                <h1 className="movie_title">{poster.title}</h1>
                                 <p>{trimmedOverview}</p>
                             </div>
                         </div>
