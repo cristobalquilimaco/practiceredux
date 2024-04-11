@@ -40,12 +40,13 @@ const MovieCard = () => {
         {moviesData && moviesData.length > 0 ? (
           moviesData.map(movie => (
             <div className="movie__card" key={movie.id}>
+                            <div className={`circle_number ${getColorClass(movie.vote_average)}`}>
+                <p className="vote_value">{movie.vote_average}</p>
+              </div>
               <img className="img_movie" src={movie.poster_path} alt="" />
               <h2>{movie.title}</h2>
               <p>{movie.release_date}</p>
-              <div className={`circle_number ${getColorClass(movie.vote_average)}`}>
-                <p className="vote_value">{movie.vote_average}</p>
-              </div>
+
             </div>
           ))
         ) : (
