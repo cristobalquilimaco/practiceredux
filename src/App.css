@@ -9,6 +9,7 @@
   body{
     margin: 0;
     background-color: rgb(8, 3, 36);
+    user-select:none;
   }
   h1, h2, h3, h4, p, ul {
     margin-top: 0;
@@ -51,4 +52,8 @@
     background-color: rgb(44, 44, 150);    
     border-radius: 20px;       
  
+  }
+
+  body{
+
   }
