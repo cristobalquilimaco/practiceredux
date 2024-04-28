@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 const Navbar = () => {
   const [inputValue, setInputValue] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const { moviesGlobal } = useSelector(state => state);
+  const moviesGlobal = useSelector(state => state.moviesGlobal);
   const input = useRef();
 
   const handleChangeInput = () => {

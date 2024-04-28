@@ -4,6 +4,11 @@ import "./styles/poster.css";
 const Poster = () => {
     const posterMovies = useSelector(state => state.moviesGlobal);
 
+    // Verificar si posterMovies es un array antes de usar el método map
+    if (!Array.isArray(posterMovies)) {
+        return null; // Otra acción apropiada, dependiendo de tu lógica
+    }
+
     return (
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">

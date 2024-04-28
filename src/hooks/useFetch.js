@@ -1,16 +1,19 @@
-import axios from "axios"
-import { useState } from "react"
+import { useState } from "react";
+import axios from "axios";
 
-const useFetch = url =>{
-    const [apiInfo, setApiinfo] = useState()
-    
-    const getMovieById = () => {
-        axios.get(url)
+const useFetch = () => {
+    const [apiInfo, setApiInfo] = useState(false);
 
-        .then(res => setApiinfo(res.data))
-        .catch(err => console.log(err))
-    }
-    return [apiInfo, getMovieById]
-}
+    const getMovieById = async (url) => {
+        try {
+            const response = await axios.get(url);
+            setApiInfo(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
-export default useFetch
+    return [apiInfo, getMovieById];
+};
+
+export default useFetch;

@@ -12,16 +12,16 @@ const moviesSlice = createSlice({
     setMoviesGlobal: (state, action) => {
       return action.payload;
     },
-    setMovieDetails: (state, action) => {
-      const { id, details } = action.payload;
-      return {
-        ...state,
-        details: {
-          ...state.details,
-          [id]: { ...details }
-        }
-      };
-    }
+    // setMovieDetails: (state, action) => {
+    //   const { id, details } = action.payload;
+    //   return {
+    //     ...state,
+    //     details: {
+    //       ...state.details,
+    //       [id]: { ...details }
+    //     }
+    //   };
+    // }
   }
 });
 
