@@ -11,21 +11,11 @@ const moviesSlice = createSlice({
   reducers: {
     setMoviesGlobal: (state, action) => {
       return action.payload;
-    },
-    // setMovieDetails: (state, action) => {
-    //   const { id, details } = action.payload;
-    //   return {
-    //     ...state,
-    //     details: {
-    //       ...state.details,
-    //       [id]: { ...details }
-    //     }
-    //   };
-    // }
+    }
   }
 });
 
-export const { setMoviesGlobal, setMovieDetails } = moviesSlice.actions;
+export const { setMoviesGlobal } = moviesSlice.actions;
 
 export default moviesSlice.reducer;
 
@@ -57,13 +47,7 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
       backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
     }));
 
-
     dispatch(setMoviesGlobal(movies));
-
-    movies.forEach(async(movie) => {
-      const movieDetails = await getMoviesDetails(movie.id);
-      dispatch(setMovieDetails({ id: movie.id, details: movieDetails }));
-    })
 
     return movies;
   } catch (error) {
@@ -72,20 +56,9 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
   }
 };
 
-const getMoviesDetails = async (movieId) => {
-  try {
-    const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKeyMovie}`);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching movie details:", error);
-    throw error
-  }
-}
-
 const formatVoteAverage = (voteAverage) => {
   if(!isNaN(voteAverage)) {
     return parseFloat(voteAverage).toFixed(1);
   }
   return voteAverage;
 }
-
