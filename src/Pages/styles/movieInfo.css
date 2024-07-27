@@ -1,5 +1,7 @@
 .movie_info{
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 .movie_info{
     background-color: red;
