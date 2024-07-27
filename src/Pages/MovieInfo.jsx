@@ -64,7 +64,7 @@ const MovieInfo = () => {
   return (
     <div className="movie_info">
       <h1 className="movie_info_title">{movie.title}</h1>
-      <p>{movie.overview}</p>
+      <p className="movie_overview">{movie.overview}</p>
       <p>Fecha de lanzamiento: {movie.release_date}</p>
       <p>Calificación: {movie.vote_average}</p>
       <img

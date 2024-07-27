@@ -2,11 +2,14 @@
     color: white;
     display: flex;
     flex-direction: column;
-}
-.movie_info{
-    background-color: red;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
+.movie_overview{
+    max-width: 500px;
+}
 
 .principal__movie__img{
     width: 500px;
