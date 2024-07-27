@@ -1,7 +1,11 @@
 .movie_info{
     color: white;
 }
+.movie_info{
+    background-color: red;
+}
+
 
 .principal__movie__img{
-    width: 600px;
+    width: 500px;
 }
