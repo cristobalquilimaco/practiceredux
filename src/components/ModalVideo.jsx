@@ -12,7 +12,7 @@ const ModalVideo = ({ isOpen, onClose, videoSrc }) => {
           Salir
         </button>
         <div className="video-container">
-          <iframe
+          <iframe 
             src={videoSrc}
             title="YouTube video player"
             frameBorder="0"
