@@ -72,7 +72,7 @@ const MovieInfo = () => {
         src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
         alt={movie.title}
       />
-      <button onClick={handleOpenModal}>Ver Trailer</button>
+      <button className="button__filter" onClick={handleOpenModal}>Ver Trailer</button>
       <ModalVideo
         isOpen={isModalOpen}
         onClose={handleCloseModal}
