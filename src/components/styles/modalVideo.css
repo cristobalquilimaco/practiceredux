@@ -18,12 +18,16 @@
   
   .close-button {
     position: absolute;
-    top: 100px;
+    top: 5px;
     right: 10px;
     cursor: pointer;
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: 19px;
+    background-color:rgb(33, 33, 109);;
+    font: weight 400px;
+    border-radius: 5px;
+    color: white;
   }
   
   .video-container {

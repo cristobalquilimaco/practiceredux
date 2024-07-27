@@ -9,7 +9,7 @@ const ModalVideo = ({ isOpen, onClose, videoSrc }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={onClose}>
-          X
+          Salir
         </button>
         <div className="video-container">
           <iframe
