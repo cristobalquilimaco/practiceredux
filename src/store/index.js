@@ -6,5 +6,5 @@ const store = configureStore({
         moviesGlobal,
     }
 })
-//No olvidar exportar la funcion store para que pueda ser utilizada en otro componente
+
 export default store
