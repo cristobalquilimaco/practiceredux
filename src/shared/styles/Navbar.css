@@ -2,6 +2,7 @@
     background-color: black !important;
     color: white !important;
     width: 100%;
+    height: 100% !important;
 }
 
 .container-fluid{
@@ -17,9 +18,6 @@
     max-height: 100px !important; 
     background-color: black !important;
   }
-.collapse{
-    
-}
 
 .search-results {
     position: absolute;
@@ -56,3 +54,7 @@
  
   }
 
+.form-control{
+  background-color: red !important;
+
+}
