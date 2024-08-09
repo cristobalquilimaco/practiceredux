@@ -50,7 +50,11 @@ const Navbar = () => {
           {inputValue && searchResults.length > 0 && (
             <ul className='search-results'>
               {searchResults.map(movie => (
-                <li className='search_list' key={movie.id}>{movie.title}</li>
+                <li className='search_list' key={movie.id}>
+                <Link  to={`/movie/${movie.id}`}  >
+                {movie.title}
+                </Link>
+                </li>
               ))}
             </ul>
           )}
