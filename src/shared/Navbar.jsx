@@ -16,6 +16,12 @@ const Navbar = () => {
     setSearchResults(results);
   };
 
+  const handleMovieclick = () => {
+    setInputValue("");
+    setSearchResults([]);
+    input.current.value = "";
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -52,7 +58,7 @@ const Navbar = () => {
                           <ul className='search-results'>
               {searchResults.map(movie => (
                 <li className='search_list' key={movie.id}>
-                <Link  to={`/movie/${movie.id}`}  >
+                <Link  to={`/movie/${movie.id}`} onClick={handleMovieclick}  >
                 {movie.title}
                 </Link>
                 </li>
