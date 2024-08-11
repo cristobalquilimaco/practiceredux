@@ -19,7 +19,7 @@
     border-radius: 10px;
     background-color: rgb(33, 33, 109);
     color: white;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 .button__filter:hover{
@@ -39,7 +39,7 @@
     color: white;
     width: 240px;
     object-fit: cover;
-    height: 650px;
+
 }
 
 .movie__card:hover{
