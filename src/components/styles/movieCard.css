@@ -37,7 +37,7 @@
 
 .movie__card{
     color: white;
-    width: 400px;
+    width: 240px;
     object-fit: cover;
     height: 650px;
 }
@@ -48,16 +48,8 @@
     
 }
 
-.movie__card{
-    color: white;
-    width: 400px;
-    object-fit: cover;
-    height: 650px;
-}
-
 
 .img_movie{
-    width: 400px;
     border-radius: 10px;
 }
 
@@ -119,7 +111,7 @@
     }
 
     .img_movie{
-        width: 300px;
+        width: 240px;
         border-radius: 10px;
     }
     

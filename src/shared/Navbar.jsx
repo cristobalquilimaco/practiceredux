@@ -48,7 +48,8 @@ const Navbar = () => {
             <input className="form-control me-2" ref={input} onChange={handleChangeInput} type="search" placeholder="Search" aria-label="Search"/>
           </form>
           {inputValue && searchResults.length > 0 && (
-            <ul className='search-results'>
+            <div className='buscador'>
+                          <ul className='search-results'>
               {searchResults.map(movie => (
                 <li className='search_list' key={movie.id}>
                 <Link  to={`/movie/${movie.id}`}  >
@@ -57,6 +58,8 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+            </div>
+
           )}
         </div>
       </div>

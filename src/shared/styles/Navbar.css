@@ -54,3 +54,22 @@
  
   }
 
+  @media (min-width: 768px) {
+
+    .buscador{
+      display: flex;
+      margin-right: 20x;
+      background-color: red;
+      
+    }
+
+    .buscador{
+      display: flex;
+    }
+    
+
+    .search-results {
+     justify-content: center;
+    }
+
+  }
