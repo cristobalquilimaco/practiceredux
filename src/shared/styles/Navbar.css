@@ -6,6 +6,7 @@
 }
 
 
+
 .navbar-toggler-icon {
   background-image: none; 
   position: relative;
@@ -42,7 +43,7 @@
 
 .navbar-nav-scroll {
     overflow-y: auto !important; 
-    max-height: 100px !important; 
+    max-height: 100vh !important; 
     background-color: black !important;
   }
 

@@ -4,6 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 50px;
+    justify-content: center;
 }
 
 .filter-buttons{
@@ -123,4 +124,28 @@
         height: 500px;
         margin-bottom: 1em;
     }
+  }
+
+
+  /* paginacion */
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  .page-link {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f8f9fa;
+  }
+  
+  .page-link.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
   }
