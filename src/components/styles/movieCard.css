@@ -20,7 +20,7 @@
     border-radius: 10px;
     background-color: rgb(33, 33, 109);
     color: white;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .button__filter:hover{
@@ -134,18 +134,22 @@
     justify-content: center;
     margin-top: 20px;
     align-items: center;
+    border-radius: 1px;
+    margin-bottom: 10px;
   }
   
   .page-link {
     margin: 0 5px;
     padding: 5px 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(33, 33, 109);
     cursor: pointer;
     background-color: #f8f9fa;
+    border-radius: 1px;
   }
   
   .page-link.active {
-    background-color: #007bff;
+    background-color: rgb(33, 33, 109);
     color: white;
     border-color: #007bff;
+    border-radius: 1px;
   }
