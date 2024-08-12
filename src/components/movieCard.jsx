@@ -9,8 +9,7 @@ const MovieCard = () => {
   const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
   const moviesPerPage = 6; // Número de películas por página
   const dispatch = useDispatch();
-  const moviesData = useSelector(state => state.moviesGlobal);
-
+  const moviesData = useSelector((state) => state.moviesGlobal);
 
   useEffect(() => {
     dispatch(getMoviesThunks(filter));
@@ -42,9 +41,9 @@ const MovieCard = () => {
       </div>
       <section className="ssss">
         {currentMovies && currentMovies.length > 0 ? (
-          currentMovies.map(movie => (
+          currentMovies.map((movie) => (
             <Link to={`/movie/${movie.id}`} className="movie__card" key={movie.id}>
-              <img className="img_movie" src={movie.poster_path} alt="" />
+              <img className="img_movie" src={movie.poster_path} alt={movie.title} />
               <h2 className="title_movie">{movie.title}</h2>
               <p className="date_movie">{movie.release_date}</p>
             </Link>
