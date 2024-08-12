@@ -31,17 +31,25 @@
 .ssss{
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
 }
 
 .movie__card{
     color: white;
-    width: 240px;
+    width: 170px;
     object-fit: cover;
-
 }
+
+.title_movie{
+  font-size: 12px;
+}
+
+.date_movie{
+  font-size: 13px;
+}
+
 
 .movie__card:hover{
     cursor: pointer;
