@@ -113,25 +113,33 @@
     .ssss{
         display: flex;
         flex-wrap: wrap;
-        gap: 3rem;
+        gap: 0rem;
         align-items: center;
         justify-content: center;
-        margin: 2em;
+
     }
 
     .img_movie{
-        width: 240px;
+        width: 230px;
         border-radius: 10px;
     }
     
 
     .movie__card{
         color: white;
-        width: 300px;
+        width: 280px;
         object-fit: cover;
-        height: 500px;
         margin-bottom: 1em;
     }
+
+    .title_movie{
+      font-size: 18px;
+    }
+    
+    .date_movie{
+      font-size: 13px;
+    }
+
   }
 
 
