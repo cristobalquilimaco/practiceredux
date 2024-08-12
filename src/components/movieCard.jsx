@@ -10,6 +10,7 @@ const MovieCard = () => {
   const moviesPerPage = 5; // Número de películas por página
   const dispatch = useDispatch();
   const moviesData = useSelector(state => state.moviesGlobal);
+  
 
   useEffect(() => {
     dispatch(getMoviesThunks(filter));
