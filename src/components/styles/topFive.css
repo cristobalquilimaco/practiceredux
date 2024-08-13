@@ -1,7 +1,25 @@
 .principal_topfive{
  color: white;
+
+}
+
+.component__movie{
+    color: white;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .movie__top__five{
-    width: 150px;
+    width: 130px;
+
+}
+
+.top__movie__five{
+    font-size: 14px;
+}
+
+.top__five__title{
+    font-size: 10px;
 }

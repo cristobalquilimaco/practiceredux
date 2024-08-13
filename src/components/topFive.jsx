@@ -15,6 +15,7 @@ const TopFive = () => {
   return (
     <div className="principal_topfive">
       <h1 className="top__movie__five">Top de peliculas</h1>
+      <div className="component__movie">
       {topFiveMovies.map((movie) => (
         <div key={movie.id} className="movie__top__five">
           <img className="top__five__image" src={movie.poster_path} alt={movie.title} />
@@ -22,6 +23,8 @@ const TopFive = () => {
           <p className="top__five__date" >{movie.release_date}</p>
         </div>
       ))}
+      </div>
+
     </div>
   );
 };
