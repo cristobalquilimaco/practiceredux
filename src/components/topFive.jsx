@@ -8,7 +8,7 @@ const TopFive = () => {
  
   const topFiveMovies = moviesData
     .filter((movie) => movie.vote_average > 7) 
-    .slice(0, 5); 
+    .slice(0, 6); 
 
   console.log(topFiveMovies);
 

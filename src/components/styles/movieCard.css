@@ -1,5 +1,5 @@
 .card__movies{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -108,6 +108,14 @@
   }
 
   @media (min-width: 768px) {
+
+    .card__movies{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
 
     .ssss{
         display: flex;

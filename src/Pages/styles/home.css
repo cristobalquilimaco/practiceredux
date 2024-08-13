@@ -1,4 +1,7 @@
+@media (min-width: 768px) {
+
 .component__home{
     display: flex;
     margin-top: 3em;
+}
 }
