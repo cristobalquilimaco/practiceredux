@@ -13,7 +13,7 @@ const TopFive = () => {
   console.log(topFiveMovies);
 
   return (
-    <div className="ssss">
+    <div className="principal_topfive">
       {topFiveMovies.map((movie) => (
         <div key={movie.id} className="movie__card">
           <img src={movie.poster_path} alt={movie.title} />
