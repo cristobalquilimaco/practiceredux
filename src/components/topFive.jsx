@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import "./styles/movieCard.css";
+import "./styles/topFive.css";
 
 
 const TopFive = () => {
@@ -14,11 +14,12 @@ const TopFive = () => {
 
   return (
     <div className="principal_topfive">
+      <h1 className="top__movie__five">Top de peliculas</h1>
       {topFiveMovies.map((movie) => (
-        <div key={movie.id} className="movie__card">
-          <img src={movie.poster_path} alt={movie.title} />
-          <h3>{movie.title}</h3>
-          <p>{movie.release_date}</p>
+        <div key={movie.id} className="movie__top__five">
+          <img className="top__five__image" src={movie.poster_path} alt={movie.title} />
+          <h3 className="top__five__title">{movie.title}</h3>
+          <p className="top__five__date" >{movie.release_date}</p>
         </div>
       ))}
     </div>
