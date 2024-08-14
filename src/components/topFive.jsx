@@ -10,8 +10,6 @@ const TopFive = () => {
     .filter((movie) => movie.vote_average > 7) 
     .slice(0, 6); 
 
-  console.log(topFiveMovies);
-
   return (
     <div className="principal_topfive">
       <h1 className="top__movie__five">Top de peliculas</h1>

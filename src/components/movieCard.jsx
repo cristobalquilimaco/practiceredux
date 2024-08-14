@@ -5,7 +5,7 @@ import "./styles/movieCard.css";
 import { Link } from "react-router-dom";
 
 const MovieCard = () => {
-  const [filter, setFilter] = useState("popular");
+  const [filter, setFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
   const moviesPerPage = 10; // Número de películas por página
   const dispatch = useDispatch();
@@ -34,6 +34,7 @@ const MovieCard = () => {
   return (
     <div className="card__movies">
       <div className="filter-buttons">
+      <button className="button__filter" onClick={() => handleFilterChange("all_movies")}>All movies</button>
         <button className="button__filter" onClick={() => handleFilterChange("popular")}>Populares</button>
         <button className="button__filter" onClick={() => handleFilterChange("upcoming")}>Próximos Estrenos</button>
         <button className="button__filter" onClick={() => handleFilterChange("now_playing")}>En Cartelera</button>
