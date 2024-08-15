@@ -22,7 +22,7 @@ const Poster = () => {
                     const trimmedOverview = poster.overview.substring(0, firstDotIndex + 1);
                     return (
                         <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                            <img src={poster.backdrop_path} className="img__poster d-block w-100" alt="" />
+                            <img src={poster.backdrop_path} className="img__poster w-100" alt="" />
                             <div className="poster_title">
                                 <h1 className="movie_title">{poster.title}</h1>
                                 <p>{trimmedOverview}</p>
