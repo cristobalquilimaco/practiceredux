@@ -6,6 +6,7 @@
   color: white;
 }
 
+
 .navbar{
     background-color: black !important;
     color: white !important;
@@ -96,12 +97,14 @@
     }
 
     .buscador{
-      display: flex;
+      display: flex !important;
     }
     
 
     .search-results {
-     justify-content: center;
+      position: absolute;
+      left: 1110px;
+
     }
 
     .navbar-nav-scroll {
