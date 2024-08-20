@@ -34,6 +34,7 @@ const MovieCard = () => {
   return (
     <div className="card__movies">
       <div className="filter-buttons">
+      <button className="button__filter" onClick={() => handleFilterChange("action")}>Action</button>
         <button className="button__filter" onClick={() => handleFilterChange("popular")}>Populares</button>
         <button className="button__filter" onClick={() => handleFilterChange("upcoming")}>Próximos Estrenos</button>
         <button className="button__filter" onClick={() => handleFilterChange("now_playing")}>En Cartelera</button>
