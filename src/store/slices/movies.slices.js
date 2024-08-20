@@ -6,29 +6,24 @@ const apiKeyMovie = "0c8d154b2b93ccc0da064d6ff2a2575b";
 const moviesSlice = createSlice({
   name: "movies",
   initialState: {
-    details: {},
-    genres: []
+    details: {}
   },
   reducers: {
     setMoviesGlobal: (state, action) => {
       return action.payload;
-    },
-    setGenres: (state, action) => {
-      state.genres = action.payload;
     }
   }
 });
 
-export const { setMoviesGlobal, setGenres } = moviesSlice.actions;
+export const { setMoviesGlobal } = moviesSlice.actions;
 
 export default moviesSlice.reducer;
 
 export const getMoviesThunks = (filterType) => async (dispatch) => {
-  const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKeyMovie}&language=en-US`;
   let url;
   switch (filterType) {
-    case "action":
-      url = `https://api.themoviedb.org/3/movie/action?api_key=${apiKeyMovie}`;
+    case "all_movies":
+      url = `https://api.themoviedb.org/3/movie/changes?page=1?api_key=${apiKeyMovie}`;
       break;
     case "popular":
       url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKeyMovie}`;
@@ -44,10 +39,6 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
       break;
   }
   try {
-    const genreResponse = await axios.get(genreUrl);
-    const genres = genreResponse.data.genres;
-    dispatch(setGenres(genres));
-
     const response = await axios.get(url);
     const movies = response.data.results.map((movie) => ({
       id: movie.id,
@@ -57,10 +48,6 @@ export const getMoviesThunks = (filterType) => async (dispatch) => {
       vote_average: formatVoteAverage(movie.vote_average),
       poster_path: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
       backdrop_path: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
-      genre_names: movie.genre_ids.map(genreId => {
-        const genre = genres.find(g => g.id === genreId);
-        return genre ? genre.name : "Unknown";
-      })
     }));
 
     dispatch(setMoviesGlobal(movies));

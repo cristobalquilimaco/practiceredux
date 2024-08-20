@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getMoviesThunks } from "../store/slices/movies.slices";
-import "./styles/movieCard.css";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getMoviesThunks } from "../store/slices/movies.slices";
 
 const MovieCard = () => {
   const [filter, setFilter] = useState("");
-  const [currentPage, setCurrentPage] = useState(1); // Estado para la página actual
-  const moviesPerPage = 10; // Número de películas por página
+  const [currentPage, setCurrentPage] = useState(1);
+  const moviesPerPage = 10;
   const dispatch = useDispatch();
   const moviesData = useSelector((state) => state.moviesGlobal);
 
@@ -15,33 +14,34 @@ const MovieCard = () => {
     dispatch(getMoviesThunks(filter));
   }, [dispatch, filter]);
 
-  // Calcular los índices de las películas que se mostrarán en la página actual
+  if (!Array.isArray(moviesData)) {
+    return <p>Loading or error with movies data.</p>;
+  }
+
   const indexOfLastMovie = currentPage * moviesPerPage;
   const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
   const currentMovies = moviesData.slice(indexOfFirstMovie, indexOfLastMovie);
 
-  // Función para cambiar de página
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Total de páginas
   const totalPages = Math.ceil(moviesData.length / moviesPerPage);
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
-    setCurrentPage(1); // Reinicia la página a la primera cuando se cambia el filtro
+    setCurrentPage(1);
   };
 
   return (
     <div className="card__movies">
       <div className="filter-buttons">
-      <button className="button__filter" onClick={() => handleFilterChange("action")}>Action</button>
+        <button className="button__filter" onClick={() => handleFilterChange("action")}>Action</button>
         <button className="button__filter" onClick={() => handleFilterChange("popular")}>Populares</button>
         <button className="button__filter" onClick={() => handleFilterChange("upcoming")}>Próximos Estrenos</button>
         <button className="button__filter" onClick={() => handleFilterChange("now_playing")}>En Cartelera</button>
         <button className="button__filter" onClick={() => handleFilterChange("movie")}>Top rated</button>
       </div>
       <section className="ssss">
-        {currentMovies && currentMovies.length > 0 ? (
+        {currentMovies.length > 0 ? (
           currentMovies.map((movie) => (
             <Link to={`/movie/${movie.id}`} className="movie__card" key={movie.id}>
               <img className="img_movie" src={movie.poster_path} alt={movie.title} />
