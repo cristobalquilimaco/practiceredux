@@ -1,19 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const apiKeyMovie = "0c8d154b2b93ccc0da064d6ff2a2575b";
+const apiKeyMovie = "0c8d154b2b93ccc0da064d6ff2a2575b"
+
 
 const moviesSlice = createSlice({
-  name: "movies",
-  initialState: {
-    details: {}
+  name: "movie",
+  initialState : {
+    details: {},
   },
   reducers: {
     setMoviesGlobal: (state, action) => {
-      return action.payload;
+      return action.payload
     }
   }
-});
+})
 
 export const { setMoviesGlobal } = moviesSlice.actions;
 
