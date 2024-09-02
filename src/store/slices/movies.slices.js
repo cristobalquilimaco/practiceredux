@@ -22,9 +22,6 @@ export default moviesSlice.reducer;
 export const getMoviesThunks = (filterType) => async (dispatch) => {
   let url;
   switch (filterType) {
-    case "all_movies":
-      url = `https://api.themoviedb.org/3/movie/changes?page=1?api_key=${apiKeyMovie}`;
-      break;
     case "popular":
       url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKeyMovie}`;
       break;
