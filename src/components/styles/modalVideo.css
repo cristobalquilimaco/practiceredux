@@ -52,4 +52,10 @@
       left: 13%;
     }
 
+    .close-button {
+      position: absolute;
+      top: 80px;
+      right: 30px;
+    }
+
   }
