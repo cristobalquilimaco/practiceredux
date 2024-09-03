@@ -73,11 +73,13 @@ const MovieInfo = () => {
         alt={movie.title}
       />
       <button className="button__filter" onClick={handleOpenModal}>Ver Trailer</button>
+      <div className="modal__video">
       <ModalVideo
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         videoSrc={movie.trailerLink}
       />
+      </div>
     </div>
   );
 };

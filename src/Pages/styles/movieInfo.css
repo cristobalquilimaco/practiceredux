@@ -15,3 +15,10 @@
     width: 350px;
 }
 
+@media (min-width: 768px){
+    .modal__video{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
